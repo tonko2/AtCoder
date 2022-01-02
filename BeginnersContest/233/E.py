@@ -1,8 +1,17 @@
-# TLE
-X = input()
+X = list(map(int, list(input())))
+s = sum(X)
+X.reverse()
+res = []
+c = 0
 
-ans = 0
-for i in range(len(X)):
-    ans += int(X[0:len(X) - i])
+for x in X:
+    c += s
+    res.append(c % 10)
+    c = int(c / 10)
+    s -= x
 
-print(ans)
+if c != 0:
+    c += s
+    res.append(c % 10)
+
+print(''.join(list(map(str, res[: : -1]))))
