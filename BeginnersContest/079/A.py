@@ -1,8 +1,5 @@
-X, Y = map(str, input().split())
-
-if X < Y:
-    print("<")
-elif X > Y:
-    print(">")
+N = list(map(str, input()))
+if (N[0] == N[1] and N[1] == N[2]) or (N[1] == N[2] and N[2] == N[3]):
+    print("Yes")
 else:
-    print("=")
+    print("No")

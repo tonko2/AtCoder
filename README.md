@@ -8,6 +8,14 @@ B: 四捨五入したいときは、Decimalに変換してからfloatにする�
 
 D: ソートして比較して、カバーしてない範囲がきたら出力
 
+46
+
+A: 被ってる数はsetを使う
+
+050
+
+A: 10 + 10のような入力のときはa, o, b = input().split() または eval(input())
+
 093:
 
 A: ''.join(sorted(list(input())))
