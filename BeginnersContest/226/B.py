@@ -1,6 +1,7 @@
 N = int(input())
-s = set()
-s.add(1)
+S = set()
+for i in range(N):
+    x = list(map(int, input().split()))
+    S.add(tuple(x))
 
-print(N)
-print(s)
+print(len(S))
