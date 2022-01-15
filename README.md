@@ -60,6 +60,22 @@ A: 切り上げ -(-N // 100), 切り捨て N // 100
 
 A: 除算の切り捨て //を使う
 
+208
+
+B: 階乗はfrom math import factorialのfactorialで計算
+
+219
+
+B: １行で配列に詰める S = [input() for _ range(3)]. 文字列を結合して表示 print("".join(A))
+
+220
+
+B: NをK進法に変える int(str(N), K)
+
+226
+
+B: Setにはタプルが入れられる
+
 231
 
 C: 二分探索
