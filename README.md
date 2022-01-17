@@ -48,6 +48,10 @@ A: 大文字小文字の判定はstr.islower(), str.isupper()
 
 A: 文字列をそれぞれ１文字のリストにし、整数にする map(int, str(A))
 
+189
+
+B: 不動小数点の演算は誤差を含むから両辺に100かけて整数演算する
+
 197
 
 A: index1とindex3のswapはindex2からindex3の文字列にindex1を足したもの S[1:] + S[0]
