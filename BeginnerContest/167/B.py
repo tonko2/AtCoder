@@ -1,0 +1,6 @@
+A, B, C, K = map(int, input().split())
+ans = min(A, K)
+K -= min(A, K)
+K = max(0, K - B)
+ans += -1 * min(K, C)
+print(ans)
