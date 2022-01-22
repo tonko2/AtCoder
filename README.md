@@ -20,6 +20,14 @@ A: 10 + 10のような入力のときはa, o, b = input().split() または eval
 
 A: ''.join(sorted(list(input())))
 
+100:
+
+B: 問題の意味がわからなかった
+
+107:
+
+B: all()は配列の中が全てTrueならTrue. list(zip(*field)）で、縦の配列を作れる
+
 108
 
 A: 組み合わせは掛け算
