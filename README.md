@@ -156,6 +156,11 @@ B: 一つだけ奇数個しか現れない数があったらXORで求められ�
 C: if s in T:とやるとき, TがListだったらO(N), SetだったらO(logN)かかる
 D: 2次元配列: [list(map(int, input().split())) for _ in range(2 * n - 1)]. 二人選ぶときは, indexの小さい方から１個見つけて, ループを抜けて. そのindex + 1からもう片方を見つけるというdfs.
 
+237
+
+D: 逆から見てdequeue
+E: ポテンシャルを使ったダイクストラ
+
 RegularContest
 
 133
