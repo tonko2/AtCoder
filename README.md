@@ -93,6 +93,10 @@ B: 不動小数点の演算は誤差を含むから両辺に100かけて整数�
 
 B: 1行if res = min(res, A[i] + B[j] if i == j else max(A[i], B[j]))
 
+195
+
+B: 解けなかった. A * 個数 <= W <= B * 個数の範囲で最小と最大求める
+
 197
 
 A: index1とindex3のswapはindex2からindex3の文字列にindex1を足したもの S[1:] + S[0]

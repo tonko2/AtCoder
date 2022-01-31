@@ -1,16 +1,28 @@
-A, B, W = map(int, input().split())
-W *= 1000
+import sys
 
-ans_min = 1001
-ans_max = -1
-for i in range(0, 1000001):
-    hoge = (W - A * i) // B
-    if A * i <= W:
-        print(f'i = {i}, A * i = {A * i}, B * i = {B * i}')
-        ans_min = min(ans_min, i + hoge)
-        ans_max = max(ans_max, i + hoge)
+sys.setrecursionlimit(10 ** 6)
+stdin = sys.stdin
 
-if ans_max == -1:
-    print("UNSATISFIABLE")
-else:
-    print(f'{ans_min} {ans_max}')
+
+def main():
+    ni = lambda: int(ns())
+    na = lambda: list(map(int, stdin.readline().split()))
+    ns = lambda: stdin.readline().strip()
+
+    A, B, W = na()
+    W *= 1000
+    ans_min = float('inf')
+    ans_max = -1
+    for i in range(1, 1000 * 1000 + 1):
+        if A * i <= W <= B * i:
+            ans_max = max(ans_max, i)
+            ans_min = min(ans_min, i)
+
+    if ans_max == -1:
+        print("UNSATISFIABLE")
+    else:
+        print(ans_min, ans_max)
+
+
+if __name__ == "__main__":
+    main()
