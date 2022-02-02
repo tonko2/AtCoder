@@ -121,6 +121,10 @@ B: 階乗はfrom math import factorialのfactorialで計算
 
 B: １行で配列に詰める S = [input() for _ range(3)]. 文字列を結合して表示 print("".join(A))
 
+227
+
+C: 解けなかった. 計算量をルートで見積もれなかった.
+
 220
 
 B: NをK進法に変える int(str(N), K) ex) int("101", 2) -> 5
