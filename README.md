@@ -191,6 +191,8 @@ MathAndAlgorithm
 
 035: 解けなかった. 交差する場合がわからなかった.
 
+036: 解けなかった. 余弦定理, もしくは座標を求めて距離求める. 角度の求め方(radian): theta = math.radians(alpha)
+
 Typical90
 
 004: list(zip(*grid))は遅い.
