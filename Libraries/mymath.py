@@ -34,7 +34,7 @@ def is_intersection(x1, y1, x2, y2, x3, y3, x4, y4):
             D = C
             C = tmp
 
-        # A - B - C - DとC - D - A - B以外のケース 
+        # A - B - C - DとC - D - A - B以外のケース
         if max(A, C) <= min(B, D):
             return True
         else:
