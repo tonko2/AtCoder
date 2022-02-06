@@ -4,6 +4,29 @@ import sys
 sys.setrecursionlimit(10 ** 6)
 stdin = sys.stdin
 
+# 線分
+def segment(x1, y1, x2, y2):
+    return math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
+
+# 3角形の面積
+def heron(x1, y1, x2, y2, x3, y3):
+    AB = segment(x1, y1, x2, y2)
+    BC = segment(x2, y2, x3, y3)
+    CA = segment(x3, y3, x1, y1)
+    s = (AB + BC + CA) / 2
+    ss = s * (s - AB) * (s - BC) * (s - CA)
+    if ss < 0:
+        return -1
+    return math.sqrt(s * (s - AB) * (s - BC) * (s - CA))
+
+# 三角形かどうか
+def isTriangle(x1, y1, x2, y2, x3, y3):
+    # ABとACの傾きが一緒 = 3点が直線上にある
+    if (x3 - x1) * (y2 - y1) == (y3 - y1) * (x2 - x1):
+        return False
+    else:
+        return True
+
 # ベクトル(ax, ay)と(bx, by)の外積の大きさ
 # 外積が0 = 数直線上
 # 外積が正 = A, B, Cと時計回り
