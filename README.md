@@ -173,6 +173,10 @@ D: 2次元配列: [list(map(int, input().split())) for _ in range(2 * n - 1)]. �
 D: 逆から見てdequeue
 E: ポテンシャルを使ったダイクストラ
 
+238
+
+D: 解けなかった. x XOR y = x + y - 2(x AND y). x XOR y AND x AND y == 0
+
 RegularContest
 
 133
