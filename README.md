@@ -212,3 +212,11 @@ Typical90
 010: SegTreeの[l, r)に注意.
 
 022: GCDまではよかったが解けなかった.
+
+jsc2021
+
+A: 切り上げはmath.ceil(x)
+
+code-festival-2016-qualc
+
+A: S.rindex("F")で, 右から最初に見つかるindexを返す
