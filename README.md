@@ -226,3 +226,7 @@ A: 切り上げはmath.ceil(x)
 code-festival-2016-qualc
 
 A: S.rindex("F")で, 右から最初に見つかるindexを返す
+
+nomura2020
+
+B: 解けなかった
