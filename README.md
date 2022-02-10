@@ -229,4 +229,8 @@ A: S.rindex("F")で, 右から最初に見つかるindexを返す
 
 nomura2020
 
-B: 解けなかった
+B: 解けなかった.
+
+nikkei2019-qual
+
+B: 解けなかった.
