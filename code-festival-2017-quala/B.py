@@ -1,4 +1,3 @@
-import math
 import sys
 
 sys.setrecursionlimit(10 ** 6)
@@ -10,9 +9,13 @@ def main():
     na = lambda: list(map(int, stdin.readline().split()))
     ns = lambda: stdin.readline().strip()
 
-    X = ni()
-    d = math.gcd(360, X)
-    print(360 // d)
+    N, M, K = na()
+    for i in range(0, N + 1):
+        for j in range(0, M + 1):
+            if i * (M - j) + j * (N - i) == K:
+                print("Yes")
+                exit()
+    print("No")
 
 if __name__ == "__main__":
     main()
