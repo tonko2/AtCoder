@@ -4,7 +4,7 @@ def modpow(a, b, m):
         if b % 2 == 1:
             res = res * a % m
         a = a * a % m
-        b //= 2
+        b >>= 1
     return res
 
 # a / b % m を返す関数
