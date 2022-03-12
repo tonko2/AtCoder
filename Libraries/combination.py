@@ -13,7 +13,7 @@ def combination(n, r):
     return tmp_n // tmp_r
 
 def cmb(n, r):
-    if n - r < r: r = n - r
+    if n < r: return 0
     if r == 0: return 1
     if r == 1: return n
 

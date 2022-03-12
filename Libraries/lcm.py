@@ -1,7 +1,8 @@
 import math
 
-def lcm(N, A):
+def lcm(A):
     res = A[0]
+    N = len(A)
     for i in range(1, N):
         gcd = math.gcd(res, A[i])
         res = gcd * (res // gcd) * (A[i] // gcd)
