@@ -1,11 +1,10 @@
 def modpow(a, b, m):
-    p = a, res = 1
-    for i in range(30):
-        if b & (1 << i) != 0:
-            res *= p
-            res %= p
-        p *= p
-        p %= m
+    res = 1
+    while b != 0:
+        if b % 2 == 1:
+            res = res * a % m
+        a = a * a % m
+        b //= 2
     return res
 
 # a / b % m を返す関数
