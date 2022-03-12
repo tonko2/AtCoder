@@ -8,6 +8,6 @@ def modpow(a, b, m):
         p %= m
     return res
 
-# a
+# a / b % m を返す関数
 def division(a, b, m):
-    return ()
+    return (a * modpow(b, m - 2, m)) % m

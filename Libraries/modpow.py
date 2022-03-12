@@ -6,7 +6,3 @@ def modpow(a, b, m):
         a = a * a % m
         b >>= 1
     return res
-
-# a / b % m を返す関数
-def division(a, b, m):
-    return (a * modpow(b, m - 2, m)) % m
