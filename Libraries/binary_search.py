@@ -8,5 +8,19 @@ def main():
     print(bisect.bisect(A, 2))        # 4
     print(bisect.bisect(A, 100))      # 5
 
+
+    def judge(x):
+        return True
+
+    LIMIT = 10000
+    left = 0
+    right = LIMIT
+    while left <= right:
+        mid = (left + right) // 2
+        if judge(mid):
+            right = mid - 1
+        else:
+            left = mid + 1
+
 if __name__ == "__main__":
     main()
