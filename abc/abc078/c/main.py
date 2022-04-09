@@ -12,3 +12,4 @@ na = lambda: list(map(int, stdin.readline().split()))
 ns = lambda: stdin.readline().strip()
 
 N, M = na()
+print((100 * (N - M) + (1900 * M)) * (1 << M))
