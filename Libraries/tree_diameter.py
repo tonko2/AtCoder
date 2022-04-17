@@ -41,5 +41,5 @@ def tree_diameter():
     for i in range(N):
         if ds[i] != INF:
             res = max(res, ds[i])
-            
+
 N = 10
