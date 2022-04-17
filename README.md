@@ -384,6 +384,7 @@ MathAndAlgorithm
 
 Typical90
 
+001: 解けなかった. 値を二分探索. 全区間が探索してる値以上であることが条件
 004: list(zip(*grid))は遅い.
 
 010: SegTreeの[l, r)に注意.
