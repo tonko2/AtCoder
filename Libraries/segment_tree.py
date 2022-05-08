@@ -104,7 +104,7 @@ def main():
     """
     使い方
     
-    seg = SegTree(a, segfunc=segunc, ide_ele=ide_ele)
+    seg = SegTree(a, segfunc=segfunc, ide_ele=ide_ele)
     """
 
     print(seg.query(0, 8))
