@@ -7,8 +7,12 @@ def popcount(x):
     x = x + (x >> 32)
     return x & 0x0000007f
 
+def popcount2(x):
+    return bin(x).count("1")
+
 def main():
     print(popcount(2 ** 64 - 1))
+    print(popcount2(2 ** 64 - 1))
 
 if __name__ == '__main__':
     main()
