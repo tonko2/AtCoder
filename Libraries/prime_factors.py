@@ -10,3 +10,19 @@ def prime_factors(n):
     if rem != 1:
         res.append(rem)
     return res
+
+# N以下の素因数の種類を返す
+def prime_kinds(N, K):
+    cnt = [0] * (N + 1)
+    for i in range(2, N + 1):
+        if cnt[i] >= 1:
+            continue
+        j = i
+        while j <= N:
+            cnt[j] += 1
+            j += i
+    res = 0
+    for i in range(1, N + 1):
+        if cnt[i] >= K:
+            res += 1
+    return res
