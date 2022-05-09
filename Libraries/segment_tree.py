@@ -67,9 +67,9 @@ def main():
 
     """
     最大値
-    
+        
     def segfunc(x, y):
-        return min(x, y)    
+        return max(x, y)    
     ide_ele = -float('inf')
     """
 
