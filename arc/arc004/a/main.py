@@ -13,17 +13,15 @@ ns = lambda: stdin.readline().strip()
 
 N = ni()
 ans = 0
-comma = 0
-L = 1
-R = 10
-for i in range(17):
-    if i != 0 and i % 3 == 0:
-        comma += 1
-    if R <= N:
-        ans += (R - L) * comma
-    else:
-        ans += (N - L + 1) * comma
-        break
-    L *= 10
-    R *= 10
+X = []
+Y = []
+for _ in range(N):
+    x, y = na()
+    X.append(x)
+    Y.append(y)
+for i in range(N):
+    for j in range(i + 1, N):
+        x, y = X[i], Y[i]
+        x2, y2 = X[j], Y[j]
+        ans = max(ans, math.sqrt((x2 - x) ** 2 + (y2 - y) ** 2))
 print(ans)

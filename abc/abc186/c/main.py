@@ -11,19 +11,19 @@ ni = lambda: int(ns())
 na = lambda: list(map(int, stdin.readline().split()))
 ns = lambda: stdin.readline().strip()
 
+def base_10_to_n(x, n):
+    res = []
+    while x:
+        res.append(str(x % n))
+        x //= n
+    res.reverse()
+    return "".join(res)
+
 N = ni()
 ans = 0
-comma = 0
-L = 1
-R = 10
-for i in range(17):
-    if i != 0 and i % 3 == 0:
-        comma += 1
-    if R <= N:
-        ans += (R - L) * comma
-    else:
-        ans += (N - L + 1) * comma
-        break
-    L *= 10
-    R *= 10
+for i in range(1, N + 1):
+    a = base_10_to_n(i, 8)
+    if '7' in str(a) or '7' in str(i):
+        continue
+    ans += 1
 print(ans)

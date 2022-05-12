@@ -12,18 +12,14 @@ na = lambda: list(map(int, stdin.readline().split()))
 ns = lambda: stdin.readline().strip()
 
 N = ni()
-ans = 0
-comma = 0
-L = 1
-R = 10
-for i in range(17):
-    if i != 0 and i % 3 == 0:
-        comma += 1
-    if R <= N:
-        ans += (R - L) * comma
-    else:
-        ans += (N - L + 1) * comma
-        break
-    L *= 10
-    R *= 10
-print(ans)
+A = na()
+d = defaultdict(int)
+for i, a in enumerate(A):
+    d[a] = i + 1
+a = 0
+b = 0
+for i in range(len(A) // 2):
+    a = max(a, A[i])
+for i in range(len(A) // 2, len(A)):
+    b = max(b, A[i])
+print(d[min(a, b)])

@@ -6,24 +6,18 @@ sys.setrecursionlimit(10 ** 6)
 stdin = sys.stdin
 
 INF = float('inf')
+MOD = 10 ** 9 + 7
 
 ni = lambda: int(ns())
 na = lambda: list(map(int, stdin.readline().split()))
 ns = lambda: stdin.readline().strip()
 
 N = ni()
+A = na()
+imos = [0]
+for a in A:
+    imos.append(a + imos[-1])
 ans = 0
-comma = 0
-L = 1
-R = 10
-for i in range(17):
-    if i != 0 and i % 3 == 0:
-        comma += 1
-    if R <= N:
-        ans += (R - L) * comma
-    else:
-        ans += (N - L + 1) * comma
-        break
-    L *= 10
-    R *= 10
+for i in range(N - 1):
+    ans = (ans + (A[i] * (imos[N] - imos[i + 1]))) % MOD
 print(ans)
