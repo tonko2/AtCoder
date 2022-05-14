@@ -1,0 +1,19 @@
+import sys
+import math
+from collections import defaultdict, deque
+
+sys.setrecursionlimit(10 ** 6)
+stdin = sys.stdin
+
+INF = float('inf')
+
+ni = lambda: int(ns())
+na = lambda: list(map(int, stdin.readline().split()))
+ns = lambda: stdin.readline().strip()
+
+S = input().split()
+if S[0].lower() == S[1].lower():
+    print("Yes")
+else:
+    print("No")
+
