@@ -10,6 +10,9 @@ def segment(x1, y1, x2, y2):
 
 # 3角形の面積
 def heron(x1, y1, x2, y2, x3, y3):
+
+    def segment(x1, y1, x2, y2):
+        return math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
     AB = segment(x1, y1, x2, y2)
     BC = segment(x2, y2, x3, y3)
     CA = segment(x3, y3, x1, y1)
