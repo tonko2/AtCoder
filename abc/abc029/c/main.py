@@ -6,16 +6,20 @@ sys.setrecursionlimit(10 ** 6)
 stdin = sys.stdin
 
 INF = float('inf')
-MOD = 10 ** 9 + 7
 
 ni = lambda: int(ns())
 na = lambda: list(map(int, stdin.readline().split()))
 ns = lambda: stdin.readline().strip()
 
-def powmod(x, y):
-    res = 1
-    for i in range(y):
-        res = (res * x) % MOD
-    return res
+def dfs(cnt, s):
+    if cnt == N:
+        ans.append(s)
+    else:
+        for i in range(3):
+            dfs(cnt + 1, s + str[i])
 N = ni()
-print((powmod(10, N) - powmod(9, N) - powmod(9, N) + powmod(8, N)) % MOD)
+str = ['a', 'b', 'c']
+ans = []
+dfs(0, "")
+for s in ans:
+    print(s)

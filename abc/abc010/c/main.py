@@ -6,16 +6,18 @@ sys.setrecursionlimit(10 ** 6)
 stdin = sys.stdin
 
 INF = float('inf')
-MOD = 10 ** 9 + 7
 
 ni = lambda: int(ns())
 na = lambda: list(map(int, stdin.readline().split()))
 ns = lambda: stdin.readline().strip()
 
-def powmod(x, y):
-    res = 1
-    for i in range(y):
-        res = (res * x) % MOD
-    return res
+sx, sy, gx, gy, T, V = na()
 N = ni()
-print((powmod(10, N) - powmod(9, N) - powmod(9, N) + powmod(8, N)) % MOD)
+for _ in range(N):
+    x, y = na()
+    dis = math.sqrt((sx - x) ** 2 + (sy - y) ** 2)
+    dis2 = math.sqrt((x - gx) ** 2 + (y - gy) ** 2)
+    if T * V >= dis + dis2:
+        print("YES")
+        exit()
+print("NO")
