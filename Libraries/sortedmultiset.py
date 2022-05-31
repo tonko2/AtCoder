@@ -3,6 +3,13 @@ from bisect import bisect_left, bisect_right, insort
 from typing import Generic, Iterable, Iterator, TypeVar, Union, List
 T = TypeVar('T')
 
+# lt:          x未満の値を返す
+# le:          x以下の値を返す
+# gt:          xより大きい値を返す
+# ge:          x以上の値を返す
+# index_left:  x未満の数を数える
+# index_right: x以下の数を数える
+
 class SortedMultiset(Generic[T]):
     BUCKET_RATIO = 50
     REBUILD_RATIO = 170
@@ -53,7 +60,7 @@ class SortedMultiset(Generic[T]):
 
     def count(self, x: T) -> int:
         "Count the number of x."
-        return self.index_right(x) - self.index(x)
+        return self.index_right(x) - self.index_left(x)
 
     def add(self, x: T) -> None:
         "Add an element. / O(√N)"
@@ -115,7 +122,7 @@ class SortedMultiset(Generic[T]):
             x -= len(a)
         raise IndexError
     # x未満の数を数える
-    def index(self, x: T) -> int:
+    def index_left(self, x: T) -> int:
         "Count the number of elements < x."
         ans = 0
         for a in self.a:
@@ -134,16 +141,12 @@ class SortedMultiset(Generic[T]):
         return ans
 
 def main():
-    # lt:          x未満の値を返す
-    # le:          x以下の値を返す
-    # gt:          xより大きい値を返す
-    # ge:          x以上の値を返す
-    # index:       x未満の数を数える
-    # index_right: x以下の数を数える
 
     A = SortedMultiset([10, 20, 20, 30, 30, 40])
-    index = A.index_right(20)
-    print(index)
+    index_right = A.index_right(20)
+    index_left = A.index_left(20)
+    print(index_right)
+    print(index_left)
 
 if __name__ == '__main__':
     main()
