@@ -147,6 +147,13 @@ def main():
     index_left = A.index_left(20)
     print(index_right)
     print(index_left)
+    A.add(5)
+    A.add(55)
+    A.add(50)
+    print(A[0])
+    print(A[-1])
+    print(A[-1] - A[0])
+    print(len(A))
 
 if __name__ == '__main__':
     main()
