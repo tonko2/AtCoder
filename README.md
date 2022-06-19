@@ -620,10 +620,6 @@ joi2008yo
 
 D: 解けた. 座標全通り試す必要なく、MとNをループさせ、全ての平行パターンが出す. diff_x = XM[i] - XN[j], diff_y = YM[i] - YN[j]
 
-Memo:
-bisect_left(A, x)は、Aのx未満の要素の個数
-bisect_right(A, x)は、Aのx以下の要素の個数
-
 joi2008ho
 
 C: 解けなかった. ダーツを2本投げた状態から二分探索する.
