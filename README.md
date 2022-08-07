@@ -348,6 +348,13 @@ E: 解けなかった. 出次数が1の有向グラフをFunctional Graphと呼�
 C: 解けなかった. 二分探索だと思った.
 D: 解けなかった. 二分探索 + ワーシャルフロイドでTLE. ある頂点からいけるとこまでdfsすれば通る.
 
+259
+
+B: 解けた. 回転行列. x = a * cos(θ) - sin(θ), y = a * sin(θ) + a * cos(θ). rad = math.radians(d).
+C: 解けた. ランレングス圧縮
+D: 解けなかった. dfsで戻る時にFalseにしたせいでTLE. 円の交差判定.
+
+
 RegularContest
 
 054:
