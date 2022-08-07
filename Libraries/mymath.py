@@ -4,6 +4,11 @@ import sys
 sys.setrecursionlimit(10 ** 6)
 stdin = sys.stdin
 
+# 回転行列 (x * cos(θ) - y * sin(θ), x * sin(θ) + y * cos(θ))
+def rotate_coord(x, y, d):
+    rad = math.radians(d)
+    return math.cos(rad) * x - math.sin(rad) * y, math.sin(rad) * x + math.cos(rad) * y;
+
 # 線分
 def segment(x1, y1, x2, y2):
     return math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
@@ -105,22 +110,22 @@ def clock_theta(h, m):
 
 # 二つの円の状態を返す
 def circle(x1, y1, r1, x2, y2, r2):
-    d = math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)
+    d = (x1 - x2) ** 2 + (y1 - y2) ** 2
 
     # 2 つの円の内部に共通部分は存在しないが、2 つの円は接している
-    if d == r1 + r2:
+    if d == (r1 + r2) ** 2:
         return 4
 
     # 一方の円が他方の円を完全に含み、2 つの円は接している
-    elif d == abs(r1 - r2):
+    elif d == (r1 - r2) ** 2:
         return 2
 
     # 2 つの円の内部に共通部分は存在せず、2 つの円は接していない
-    elif d > r1 + r2:
+    elif d > (r1 + r2) ** 2:
         return 5
 
     # 2 つの円が互いに交差する
-    elif d > abs(r1 - r2):
+    elif d > (r1 - r2) ** 2:
         return 3
 
     # 一方の円が他方の円を完全に含み、2 つの円は接していない
