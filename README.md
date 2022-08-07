@@ -354,6 +354,10 @@ B: 解けた. 回転行列. x = a * cos(θ) - sin(θ), y = a * sin(θ) + a * cos
 C: 解けた. ランレングス圧縮
 D: 解けなかった. dfsで戻る時にFalseにしたせいでTLE. 円の交差判定.
 
+260
+
+C: 解けなかった. DP. 再帰でTrueなら今見てるのがRed, FalseならBlueというように分けて考える.
+D: 解けなかった. SortedSetを使って、defaultdictに積んでる状態を保存していく. X以上の値が見つかったら, SortedSetから消す. また積まれれる数がK個あった場合も消し、defaultdictからもpopする.
 
 RegularContest
 
