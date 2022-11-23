@@ -359,6 +359,10 @@ D: 解けなかった. dfsで戻る時にFalseにしたせいでTLE. 円の交�
 C: 解けなかった. DP. 再帰でTrueなら今見てるのがRed, FalseならBlueというように分けて考える.
 D: 解けなかった. SortedSetを使って、defaultdictに積んでる状態を保存していく. X以上の値が見つかったら, SortedSetから消す. また積まれれる数がK個あった場合も消し、defaultdictからもpopする.
 
+271
+
+A: 16進数かつ0埋め print(f'{N:02x}'.upper())
+
 RegularContest
 
 054:
